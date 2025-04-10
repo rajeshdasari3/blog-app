@@ -1,0 +1,176 @@
+/* universal*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* sidebar.ejs */
+.sidebar {
+  min-width: 100px;
+  height: 100vh;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: #555;
+}
+
+/* common styles */
+main {
+  flex: 1;
+  padding: 30px;
+  overflow: auto;
+}
+
+main h1 {
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+span {
+  font-size: larger;
+}
+
+/* new.ejs & modify.ejs */
+input,
+textarea,
+button {
+  display: block;
+  width: 80%;
+  margin: 0 auto 20px;
+}
+
+input {
+  height: 30px;
+  padding: 5px;
+}
+
+button {
+  height: 20px;
+}
+
+textarea {
+  height: 400px;
+  padding: 10px;
+}
+
+/* view.ejs */
+.formatted-text {
+  max-width: 100%;
+  margin-right: 10px;
+  line-height: 1.6;
+  text-align: justify;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  font-family: Arial, sans-serif;
+}
+
+/* edit.ejs */
+#edit-page ul li {
+  margin-bottom: 0;
+}
+
+.inline-forms {
+  display: inline-block;
+  /* margin-left: 10px; */
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  color: #0056b3;
+}
+
+.center-h1 {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+
+  .sidebar {
+    width: 100%;
+    /* Full width */
+    height: auto;
+    /* Auto height */
+    flex-direction: row;
+    /* Change layout to horizontal */
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .sidebar h2 {
+    display: none;
+    /* Hide the sidebar title */
+  }
+
+  .sidebar a {
+    padding: 10px 15px;
+    display: inline-block;
+    /* Display links in a row */
+  }
+
+  main {
+    padding-top: 80px;
+  }
+
+  input,
+  textarea,
+  button {
+    display: block;
+    width: 100%;
+    margin: 0 auto 20px;
+  }
+
+  form {
+    height: 100%;
+  }
+
+  textarea {
+    height: 70%;
+  }
+
+
+}

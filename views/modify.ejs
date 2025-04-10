@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/header.ejs") %>
+  <body>
+    <%- include("partials/sidebar.ejs") %>
+    <main>
+      <h1 class="center-h1">Edit Post</h1>
+      <form action="/update/<%=post.id%>?_method=PUT" method="post">
+        <input type="text" name="title" value="<%=post["title"]%>" required />
+        <textarea
+          name="content"
+          id="content"
+          required
+        ><%=post["content"]%></textarea>
+        <button type="submit" onclick="return confirm('Save changes?');">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/header.ejs") %>
+  <body>
+    <%- include("partials/sidebar.ejs") %>
+    <main>
+      <h1>All Posts</h1>
+      <%if (locals.posts) { %>
+        <ul>
+          <% for(post of posts) { %>
+            <li>
+              <span>
+                <a href="/view/<%= post["id"] %>"><%=post["title"]%></a>
+              </span>
+            </li>
+          <% } %>
+        </ul>
+      <% } %>
+    </main>
+  </body>
+</html>

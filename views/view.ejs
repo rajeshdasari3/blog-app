@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/header.ejs") %>
+  <body>
+    <%- include("partials/sidebar.ejs") %>
+    <main>
+      <div class="post-container">
+        <h1><%= post["title"] %></h1>
+        <pre class="formatted-text"><%= post["content"] %></pre>
+      </div>
+    </main>
+  </body>
+</html>
